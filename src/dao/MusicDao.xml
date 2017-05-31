@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.MusicDao">
+
+	<insert id="add" parameterType="entity.Music" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO
+		`t_music`(`original_name`,`chs_name`,`cover_url`,`artist`,`press`,`year`,`barcode`,`intro`,`catalog`,`genre`)
+		VALUES(#{originalName},#{chsName},#{coverUrl},#{artist},#{press},#{year},#{barcode},#{intro},#{catalog},#{genre});
+	</insert>
+</mapper>

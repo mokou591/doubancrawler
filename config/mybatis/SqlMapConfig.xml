@@ -1,0 +1,17 @@
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!-- SQL下划线命名 和 Java驼峰命名 -->
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+
+	<!-- 加载mapper.xml -->
+	<mappers>
+		<package name="dao" />
+	</mappers>
+
+
+</configuration>
