@@ -18,7 +18,7 @@ public class FilmProcessor implements PageProcessor {
 	}
 
 	public void process(Page page) {
-		// 判断是否可以是可以提取出电影的页面
+		// 判断是否可以是可以提取出影人的页面
 		if (page.getRequest().getUrl().toString()
 				.contains("movie.douban.com/subject/")) {
 			try {

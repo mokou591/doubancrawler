@@ -1,5 +1,8 @@
 package util;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import us.codecraft.webmagic.selector.Html;
 
 public class StringUtil {
@@ -19,6 +22,16 @@ public class StringUtil {
 			return html.regex(regex, 1).toString().trim();
 		}
 	}
+	public static String getBetweenRegex(String infoStr, String left,
+			String right) {
+		Pattern pat = Pattern.compile(left+ "((.?){50})"+right);
+		Matcher matcher = pat.matcher(infoStr);
+		if(matcher.find()){
+			return matcher.group(1);
+		}else{
+			return "";
+		}
+	}
 
 	/**
 	 * 获得字符串两个匹配值之间的值
@@ -34,4 +47,6 @@ public class StringUtil {
 		}
 
 	}
+
+
 }
